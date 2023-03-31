@@ -9,14 +9,15 @@ const handleMouseMove = e => {
 
     // console.log({ fractionX, fractionY });
 
-    const pupilX = -70 + fractionX * 140;
-    const pupilY = -70 + fractionY * 140;
+    const pupilX = -100 + fractionX * 100;
+    const pupilY = -100 + fractionY * 100;
 
     console.log({ pupilX, pupilY });
 
     document.querySelectorAll('.pupil').forEach(eye => {
-        eye.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+        eye.style.transform = `translate(${pupilX}%, ${pupilY}%)`;
     });
 }
 
 window.addEventListener('mousemove', handleMouseMove);
+
